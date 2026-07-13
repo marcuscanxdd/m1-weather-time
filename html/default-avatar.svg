@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Varsayılan kullanıcı profili">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9dee8"/>
+      <stop offset="1" stop-color="#aeb7c7"/>
+    </linearGradient>
+    <linearGradient id="person" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e8edf4"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="72" fill="url(#background)"/>
+  <circle cx="128" cy="96" r="47" fill="url(#person)"/>
+  <path d="M43 225c4-50 38-78 85-78s81 28 85 78H43Z" fill="url(#person)"/>
+</svg>

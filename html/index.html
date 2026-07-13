@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr" data-m1="M1WT-HTML-GUARD-v1">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M1 Weather Time</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main id="app" class="m1-root hidden">
+        <section class="m1-panel" id="panel">
+            <div class="m1-glow m1-glow-one"></div>
+            <div class="m1-glow m1-glow-two"></div>
+
+            <header class="m1-header">
+                <div class="m1-title-wrap">
+                    <div class="m1-welcome"><span id="welcomeBlue">Hoş geldin,</span></div>
+                    <div class="m1-player" id="playerName">Admin</div>
+                </div>
+                <div class="m1-profile-avatar" title="Oyuncu profili">
+                    <img id="profileAvatar" src="default-avatar.svg" alt="Profil" />
+                    <span class="m1-profile-status"></span>
+                </div>
+                <button class="m1-close" id="closeBtn" aria-label="Kapat">×</button>
+            </header>
+
+            <div class="m1-tabline">
+                <button class="m1-tab active" id="weatherTab">Hava</button>
+                <button class="m1-tab" id="timeTab">Saat</button>
+                <span class="m1-mini-lock">M1 Secure</span>
+            </div>
+
+            <section id="weatherView" class="m1-view">
+                <div class="m1-section-head">
+                    <div>
+                        <h1 id="weatherTitle">Havayı Yönet</h1>
+                        <p id="weatherHint">Sunucu havasını seç ve bütün oyunculara uygula.</p>
+                    </div>
+                    <div class="m1-current-card">
+                        <span id="currentWeatherIcon">☀</span>
+                        <strong id="currentWeatherText">EXTRASUNNY</strong>
+                    </div>
+                </div>
+
+                <label class="m1-search-wrap">
+                    <span>⌕</span>
+                    <input id="weatherSearch" type="text" autocomplete="off" placeholder="Hava ara..." />
+                </label>
+
+                <div class="m1-weather-grid" id="weatherGrid"></div>
+
+                <button class="m1-apply" id="applyWeatherBtn">Uygula</button>
+            </section>
+
+            <section id="timeView" class="m1-view hidden">
+                <div class="m1-section-head">
+                    <div>
+                        <h1 id="timeTitle">Saati Yönet</h1>
+                        <p id="timeHint">Sunucu saatini ve dakikasını belirle.</p>
+                    </div>
+                    <div class="m1-current-card time-card">
+                        <span>◷</span>
+                        <strong id="currentTimeText">12:00</strong>
+                    </div>
+                </div>
+
+                <div class="m1-time-boxes">
+                    <div class="m1-number-box">
+                        <label id="hourLabel">Saat</label>
+                        <button class="m1-step" data-target="hourInput" data-step="1">+</button>
+                        <input id="hourInput" type="number" min="0" max="23" value="12" />
+                        <button class="m1-step" data-target="hourInput" data-step="-1">−</button>
+                    </div>
+                    <div class="m1-separator">:</div>
+                    <div class="m1-number-box">
+                        <label id="minuteLabel">Dakika</label>
+                        <button class="m1-step" data-target="minuteInput" data-step="5">+</button>
+                        <input id="minuteInput" type="number" min="0" max="59" value="0" />
+                        <button class="m1-step" data-target="minuteInput" data-step="-5">−</button>
+                    </div>
+                </div>
+
+                <div class="m1-time-presets">
+                    <button data-hour="6" data-minute="0">Sabah</button>
+                    <button data-hour="12" data-minute="0">Öğlen</button>
+                    <button data-hour="18" data-minute="0">Akşam</button>
+                    <button data-hour="23" data-minute="0">Gece</button>
+                </div>
+
+                <button class="m1-apply" id="applyTimeBtn">Uygula</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
